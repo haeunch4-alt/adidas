@@ -1,6 +1,6 @@
 /* index.css */
 body {
-    width:1920px; background-color: blue;
+    width:1920px;
 }
 header {position:relative;}
 
@@ -22,16 +22,17 @@ header nav {
     padding: 0 50px;
     width:1920px;
     position:absolute; 
+    z-index: 999;
 }
 header nav .logo {width:50px; }
 header nav .logo img {width:100%;}
 /* --------------------------------- gnb center */
 header nav .gnb_center {width:660px; position:absolute; top:center; right:630px ;}
-header nav .gnb_center > li {
+header nav .gnb_center > li {}
+header nav .gnb_center > li a {    
     color:#fff;
     font-size: 1rem;
-    font-weight: 500;
-}
+    font-weight: 300;}
 /* men hover */
 header nav .gnb_center > li > .lnb {}
 /* --------------------------------- gnb right */
@@ -45,13 +46,18 @@ header nav .gnb_right .cart img {width:100%; }
 /* ------------------------------------------------header end */
 /* ------------------------------------------------main start */
 main {}
-main .main_bnr {}
+main .main_bnr {position:relative; width:1920px;}
 main .main_bnr .swiper-wrapper {}
+main .main_bnr .swiper-button-prev {width:30px;position:absolute; right:280px; bottom:50px;}
+main .main_bnr .swiper-button-prev img {width:100%}
+main .main_bnr .swiper-button-next {width:30px; position:absolute; right:240px; bottom:50px;} 
+main .main_bnr .swiper-button-next img {width:100%}
+main .main_bnr .swiper-scrollbar {width:1320px; height: 2px;}
 main .main_bnr .swiper-wrapper .swiper-slide { 
     background-image:url(../images/main_bnr.jpg);
     width:1920px; height:913px;
     background-size: cover;
-    padding: 300px 0 0 240px;
+    padding: 300px 0 0 240px; 
 }
 main .main_bnr .swiper-wrapper .swiper-slide h1 {
     font-family: 'Radio Canada Big';
@@ -67,3 +73,43 @@ main .main_bnr .swiper-wrapper .swiper-slide p {
 main .main_bnr .swiper-wrapper .swiper-slide .viewAll1 {
     position:absolute; bottom:404px;
 }
+main .main_bnr .swiper-wrapper .swiper-slide .viewAll1 p {}
+/* ---------------------------------------------------2행 */
+main .best_pick {
+    padding:100px 240px 0; gap:20px;
+    /* display: flex; flex-flow:column nowrap;
+    align-items: center;*/
+} 
+main .best_pick .title {text-align: center; gap:4px;}
+main .best_pick .title h2 {
+    font-size: 2.125rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+main .best_pick .title p {
+    font-size: 0.875rem;
+    line-height: 1.2;
+    color:#999; 
+    margin-bottom: 20px;
+}
+main .best_pick .category_more_wrap {}
+main .best_pick .category_more_wrap .category {gap:8px; width:534px;}
+main .best_pick .category_more_wrap .category li {}
+main .best_pick .category_more_wrap .category li button {
+    font-weight: 300; color:#888;
+    padding:8px 10px;
+}
+main .best_pick .category_more_wrap .category .active {
+    border-bottom: 2px solid #000;
+}
+main .best_pick .category_more_wrap .category .active > button{
+    color:#000; 
+    font-weight: 600;
+}
+main .best_pick .category_more_wrap .more_btn {width:96px;}
+main .best_pick .category_more_wrap .more_btn p {font-size: 0.875rem; font-weight: 700;} 
+main .best_pick .category_more_wrap .more_btn .imge {width:22px;}
+main .best_pick .category_more_wrap .more_btn .imge img {width:100%;}
+main .best_pick .product_swiper {}
+main .best_pick .product_swiper .swiper-wrapper {}
+main .best_pick .product_swiper .swiper-wrapper .swiper-slide {}

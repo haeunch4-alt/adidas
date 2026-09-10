@@ -1,12 +1,60 @@
 /* var.css */
+
+/* 정렬 */
 .flex-row-space{
     display:flex; flex-flow: row nowrap;
     justify-content: space-between; align-items: center;
 }
+
 /* 공통디자인 */
 .viewAll1 {
     display: flex; justify-content: center;
     background-color: rgba(255, 255, 255, 0.6);
     width: 196px; height: 41px;
     transform:skewX(-15deg);
+}
+
+/* 버튼 디자인v.1 */
+.viewAll1 p {
+    color:#000 !important;
+    transform:skewX(15deg); 
+}
+main .main_bnr .swiper-button-prev,
+main .main_bnr .swiper-button-next {
+    position: absolute;
+    top: auto; /* 기본 top 위치 제거 */
+    bottom: 50px;
+    margin-top: 0; /* 기본 중앙 정렬 margin 제거 */
+}
+
+
+/* 메인배너 이전다음, 스크롤 버튼 */
+main .main_bnr .swiper-button-prev {
+    right: 280px;
+    left: auto; /* 기본 left 위치 제거 */
+}
+
+main .main_bnr .swiper-button-next {
+    right: 240px;
+}
+main .main_bnr .swiper-button-prev::after,
+main .main_bnr .swiper-button-next::after {
+  display: none; /* 기본 폰트 아이콘 숨김 */
+}
+/* 스크롤바 전체 영역 (Track) */
+main .main_bnr .swiper-scrollbar {
+    position: absolute;
+    bottom:  64px;          /* 원하는 bottom 좌표 */
+    left: 240px;             /* 중앙 정렬 예시 */
+    width:1320px;          /* 원하는 너비 지정 */
+    height: 4px;           /* 높이 */
+    background: rgba(219, 219, 219, 0.4);      /* 트랙 배경색 */
+    border-radius: 2px;
+    }
+
+    /* 움직이는 바 (Thumb) */
+    main .main_bnr .swiper-scrollbar-drag {
+    background: #fff;      /* 바 색상 */
+    border-radius: 2px;
+    cursor: pointer;
 }

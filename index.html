@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="styles/var.css">
     <link rel="stylesheet" href="styles/index.css">
     <script src="./scripts/index.js" defer></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- 글꼴 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,15 +24,15 @@
         <nav class="flex-row-space">
             <a href="./index.html" class="logo"><img src="./images/logo.png" alt="adidas"></a>
             <ul class="gnb_center flex-row-space">
-                <li>아디클럽 데이</li>
-                <li>OULET</li>
-                <li>MEN
+                <li><a href="#">아디클럽 데이</a></li>
+                <li><a href="#">OULET</a></li>
+                <li><a href="#">MEN</a>
                     <ul class="lnb"></ul>
                 </li>
-                <li>WOMEN</li>
-                <li>KIDS</li>
-                <li>SPORTS</li>
-                <li>LIFESTYLE</li>
+                <li><a href="#">WOMEN</a></li>
+                <li><a href="#">KIDS</a></li>
+                <li><a href="#">SPORTS</a></li>
+                <li><a href="#">LIFESTYLE</a></li>
             </ul>
             <div class="gnb_right flex-row-space">
                 <button type="button" class="search"><img src="./images/search.png" alt="검색하기"></button>
@@ -44,9 +47,17 @@
                 <div class="swiper-slide"> 
                     <h1>FUNCTIONAL GRACE</h1>
                     <p>JENNIE만의 독창적인 시선과 창의적인 비전이 더해저, 강인한 <br> 여성의 우아한 움직임에서 영감받은 컬렉션</p>
-                    <a href="#" class="viewAll1 flex-row-space">VIEW ALL</a>
+                    <a href="#" class="viewAll1 flex-row-space"><p>VIEW ALL</p></a>
+                </div>
+                <div class="swiper-slide">
+                    <h1>FUNCTIONAL GRACE</h1>
+                    <p>JENNIE만의 독창적인 시선과 창의적인 비전이 더해저, 강인한 <br> 여성의 우아한 움직임에서 영감받은 컬렉션</p>
+                    <a href="#" class="viewAll1 flex-row-space"><p>VIEW ALL</p></a>
                 </div>
             </div>
+            <div class="swiper-button-prev"><img src="./images/main_bnr_arrow.png" alt="이전"></div>
+            <div class="swiper-button-next"><img src="./images/main_bnr_arrow_flip.png " alt="다음"></div>
+            <div class="swiper-scrollbar"></div>
         </div>
         <!-- --------------------------- 2행 best pick --> 
         <div class="best_pick">
@@ -54,16 +65,24 @@
                 <h2>BEST PICK</h2>
                 <p>아이코닉한 디자인, 증명된 트렌드</p>
             </div>
-            <div class="category swiper">
-                div.swiper-wrapper>swiper
-                <!-- <li>NEW & TRENDING</li>
-                <li>SHOES
-                    <ul class="shoes_pro"></ul>
-                </li>
-                <li>WOMEN</li>
-                <li>MEN</li>
-                <li>KIDS</li>
-                <li>SPORTS</li> -->
+            <div class="category_more_wrap flex-row-space">
+                <ul class="category flex-row-space" >
+                    <li><button type="button">NEW & TRENDING</button></li>
+                    <li class="active"><button type="button" >SHOES</button></li>
+                    <li><button type="button">WOMEN</button></li>
+                    <li><button type="button">MEN</button></li>
+                    <li><button type="button">KIDS</button></li>
+                    <li><button type="button">SPORTS</button></li>
+                </ul>
+                <a href="#" class="more_btn flex-row-space">
+                    <p>VIEW ALL</p>
+                    <p class="imge"><img src="./images/product_viewAll_arrow.png" alt="viewall"></p>
+                </a>
+            </div>
+            <div class="swiper product_swiper">
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide"></div> -->
+                </div>
             </div>
         </div>
         <!-- --------------------------- 3행 분류 -->
