@@ -1,0 +1,69 @@
+/* index.css */
+body {
+    width:1920px; background-color: blue;
+}
+header {position:relative;}
+
+/* ---------------------------------  */
+header .benefit_bnr {
+    background-color: #000;
+    height:47px;
+    display:flex; flex-flow: row nowrap;
+    justify-content: center; align-items: center;
+}
+header .benefit_bnr p {
+    color:#DDD;
+    font-size:0.875rem;
+    
+}
+/* ---------------------------------  */
+header nav {
+    height:67px;
+    padding: 0 50px;
+    width:1920px;
+    position:absolute; 
+}
+header nav .logo {width:50px; }
+header nav .logo img {width:100%;}
+/* --------------------------------- gnb center */
+header nav .gnb_center {width:660px; position:absolute; top:center; right:630px ;}
+header nav .gnb_center > li {
+    color:#fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+/* men hover */
+header nav .gnb_center > li > .lnb {}
+/* --------------------------------- gnb right */
+header nav .gnb_right {width:112px; }
+header nav .gnb_right .search {width:24px;}
+header nav .gnb_right .search img {width:100%;}
+header nav .gnb_right .mypage {width:24px;}
+header nav .gnb_right .mypage img {width:100%;}
+header nav .gnb_right .cart {width:24px; }
+header nav .gnb_right .cart img {width:100%; }
+/* ------------------------------------------------header end */
+/* ------------------------------------------------main start */
+main {}
+main .main_bnr {}
+main .main_bnr .swiper-wrapper {}
+main .main_bnr .swiper-wrapper .swiper-slide { 
+    background-image:url(../images/main_bnr.jpg);
+    width:1920px; height:913px;
+    background-size: cover;
+    padding: 300px 0 0 240px;
+}
+main .main_bnr .swiper-wrapper .swiper-slide h1 {
+    font-family: 'Radio Canada Big';
+    font-size: 2.625rem;
+    font-weight: bold;
+    line-height: 1.6;
+    color:#fff;
+}
+main .main_bnr .swiper-wrapper .swiper-slide p {
+    line-height: 1.6;
+    color:#e2e2e2;
+}
+main .main_bnr .swiper-wrapper .swiper-slide .viewAll1 {
+    position:absolute; bottom:404px;
+}
