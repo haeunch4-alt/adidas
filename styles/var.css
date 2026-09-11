@@ -7,40 +7,54 @@
 }
 
 /* 공통디자인 */
+
+/* 버튼 디자인v.1 */
 .viewAll1 {
     display: flex; justify-content: center;
     background-color: rgba(255, 255, 255, 0.6);
     width: 196px; height: 41px;
     transform:skewX(-15deg);
 }
-
-/* 버튼 디자인v.1 */
 .viewAll1 p {
     color:#000 !important;
     transform:skewX(15deg); 
 }
-main .main_bnr .swiper-button-prev,
-main .main_bnr .swiper-button-next {
+/* 버튼 디자인v.2 */
+main .shoes_category .shoes  .shoesBtm {
+    width:476px; height:80px; 
+    display: flex; align-items: center; justify-content: center;
+    background-color: #000;
+    transform: skewX(-32deg);
+}
+main .shoes_category .shoes .shoesBtm p {
+    color:#fff;
+    transform: skewX(32deg);
+}
+
+
+/* 메인배너 이전다음, 스크롤 버튼 */
+main .main_bnr > .swiper-button-prev {
+    right: 280px;
+    left: auto; /* 기본 left 위치 제거 */
+}
+main .main_bnr > .swiper-button-prev,
+main .main_bnr > .swiper-button-next {
     position: absolute;
     top: auto; /* 기본 top 위치 제거 */
     bottom: 50px;
     margin-top: 0; /* 기본 중앙 정렬 margin 제거 */
 }
 
-
-/* 메인배너 이전다음, 스크롤 버튼 */
-main .main_bnr .swiper-button-prev {
-    right: 280px;
-    left: auto; /* 기본 left 위치 제거 */
-}
-
-main .main_bnr .swiper-button-next {
+main .main_bnr > .swiper-button-next {
     right: 240px;
 }
-main .main_bnr .swiper-button-prev::after,
-main .main_bnr .swiper-button-next::after {
-  display: none; /* 기본 폰트 아이콘 숨김 */
+main .main_bnr > .swiper-button-prev::after,
+main .main_bnr > .swiper-button-next::after {
+    display: none; /* 기본 폰트 아이콘 숨김 */
 }
+
+
+
 /* 스크롤바 전체 영역 (Track) */
 main .main_bnr .swiper-scrollbar {
     position: absolute;

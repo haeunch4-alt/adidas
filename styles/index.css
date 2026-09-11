@@ -76,11 +76,12 @@ main .main_bnr .swiper-wrapper .swiper-slide .viewAll1 {
 main .main_bnr .swiper-wrapper .swiper-slide .viewAll1 p {}
 /* ---------------------------------------------------2행 */
 main .best_pick {
-    padding:100px 240px 0; gap:20px;
+    /* padding:100px 240px 0; */ gap:20px;
     /* display: flex; flex-flow:column nowrap;
     align-items: center;*/
+    position:relative;
 } 
-main .best_pick .title {text-align: center; gap:4px;}
+main .best_pick .title {text-align: center; gap:4px; margin-top:100px;}
 main .best_pick .title h2 {
     font-size: 2.125rem;
     line-height: 1.2;
@@ -92,7 +93,7 @@ main .best_pick .title p {
     color:#999; 
     margin-bottom: 20px;
 }
-main .best_pick .category_more_wrap {}
+main .best_pick .category_more_wrap {margin-bottom:14px; padding: 0 240px;}
 main .best_pick .category_more_wrap .category {gap:8px; width:534px;}
 main .best_pick .category_more_wrap .category li {}
 main .best_pick .category_more_wrap .category li button {
@@ -110,6 +111,145 @@ main .best_pick .category_more_wrap .more_btn {width:96px;}
 main .best_pick .category_more_wrap .more_btn p {font-size: 0.875rem; font-weight: 700;} 
 main .best_pick .category_more_wrap .more_btn .imge {width:22px;}
 main .best_pick .category_more_wrap .more_btn .imge img {width:100%;}
-main .best_pick .product_swiper {}
+/* ===================================상품 */
+main .best_pick .product_swiper {
+    position:relative; overflow: hidden;  
+    margin: 0 auto;
+    max-width: 1440px; width:100%;
+}
+/* ===================================이전다음 버튼 start */
+/* 공통: Swiper 기본 중앙정렬 스타일 무력화 */
+main .best_pick >  .swiper-button-prev,
+main .best_pick > .swiper-button-next {
+    position: absolute;
+    top: 50%;          /* Swiper 기본 top: 50% 제거 */
+    margin-top: 0;      /* Swiper 기본 margin-top 제거 */
+    width: 30px;
+    height: 40px;
+}
+/* 이전 버튼 위치 */
+main .best_pick > .swiper-button-prev {
+    left: 160px;
+    right: auto;
+    bottom: 225.5px;    /* 원하는 Y축 위치 */
+}
+/* 다음 버튼 위치 */
+main .best_pick > .swiper-button-next {
+    right: 160px;
+    left: auto;
+    bottom: 225.5px;    /* 이전 버튼과 높이를 맞추려면 동일하게 작성 */
+}
+/* 이미지 크기 */
+main .best_pick > .swiper-button-prev img,
+main .best_pick > .swiper-button-next img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+main .best_pick >.swiper-button-prev::after,
+main .best_pick .swiper-button-next::after {
+    display: none;
+}
+/* ===================================이전다음 버튼 end */
 main .best_pick .product_swiper .swiper-wrapper {}
 main .best_pick .product_swiper .swiper-wrapper .swiper-slide {}
+main .best_pick .product_swiper .swiper-wrapper .swiper-slide .product_image {margin-bottom:20px; width:max-content;}
+main .best_pick .product_swiper .swiper-wrapper .swiper-slide .product_image img {width:100%;}
+main .best_pick .product_swiper .swiper-wrapper .swiper-slide h3 {
+    padding: 0 5px; margin-bottom: 4px;
+    font-weight:700 ;
+    line-height: 1.5;
+    letter-spacing: -1.1%;
+    width:max-content;
+}
+main .best_pick .product_swiper .swiper-wrapper .swiper-slide .produt_price {
+    padding: 0 5px;
+    font-size:0.875rem;
+    line-height: 1.5;
+    letter-spacing: -1.1%;
+    width:max-content;
+}
+/* ---------------------------------------------------3행 */
+main .shoes_category {
+    padding:100px 240px 180px ; gap:8px;
+    background-image: url(../images/shoes_category_background.jpg);
+    background-size:cover ;
+}
+main .shoes_category .shoes {}
+main .shoes_category .shoes_1 .shoesTop {background-image: url(../images/shoes1.jpg);}
+main .shoes_category .shoes_2 .shoesTop {background-image: url(../images/shoes2.jpg);}
+main .shoes_category .shoes_3 .shoesTop {background-image: url(../images/shoes3.jpg);}
+main .shoes_category .shoes .shoesTop {
+    transform: skewX(12deg);
+    background-size: cover;
+    height: 591px; display: block; 
+    margin-bottom: 2px; 
+}
+main .shoes_category .shoes .shoesTop p {
+    color:#d7d7d7;
+    font-size: 0.875rem;
+    transform: skewX(-12deg);
+    position:absolute; left: 30px; bottom:66.64px;
+}
+main .shoes_category .shoes .shoesTop h3 {
+    transform: skewX(-12deg);
+    color:#fff; 
+    font-size: 2.5rem;
+    font-weight: 700;
+    position:absolute; left: 20px; bottom:20.4px;
+}
+/* ------------------------view all */
+main .shoes_category .shoes .shoesBtm {}
+main .shoes_category .shoes .shoesBtm p {}
+/* ---------------------------------------------------4행 판매상품 */
+main .fallProduct {
+    padding:100px 0; display: flex; flex-flow: row nowrap; 
+    justify-content: space-between;
+    position:relative;
+}
+main .fallProduct .product{
+    margin-left: 240px; display: flex; flex-flow: row wrap;
+    width:661px; height: 778px;
+}
+main .fallProduct .product li {
+    margin: 0 21px 20px 0;
+}
+main .fallProduct .product li:nth-child(2) {margin: 0 0px 20px 0;}
+main .fallProduct .product li:nth-child(4) {margin: 0 0 20px 0;}
+main .fallProduct .product li .image {width:320px; margin-bottom:10px;}
+main .fallProduct .product li .image img {width:100%;}
+main .fallProduct .product li h3 {padding-left: 5px; margin-bottom: 4px; line-height: 1.5; font-weight: 700;}
+main .fallProduct .product li .price {padding-left: 5px; line-height: 1.5; font-size: 0.875rem;}
+main .fallProduct .fallBack {width:729px; height:778px; margin-right:240px; display: block;} 
+main .fallProduct .fallBack img {width:100%; height:100%;}
+main .fallProduct > .fallSub {
+    position:absolute;
+    line-height: 1.6;
+    right:443px;
+    color:#fff;
+    top:421px;
+} 
+main .fallProduct > h3 {
+    position:absolute; 
+    font-family: 'Pragati Narrow';
+    font-size: 5rem; font-weight: 800; 
+    color:#fff;
+    line-height: 1.6;
+    right:341px; top:424px;
+}
+main .fallProduct .viewAll1 {
+    position:absolute; right:277px; bottom:117px;
+    display: flex; justify-content: center; align-items: center ;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 196px; height: 41px;
+    transform:skewX(-15deg);
+}
+main .fallProduct .viewAll1 p {
+    color:#000 !important;
+    transform:skewX(15deg); 
+}
+/* ---------------------------------------------------5행 판매상품(제니콜라보) */
+/* ---------------------------------------------------6행 광고배너 */
+/* ---------------------------------------------------7행 룩북 */
+/* ---------------------------------------------------8행 브랜드 */
+/* ---------------------------------------------------9행 footer */

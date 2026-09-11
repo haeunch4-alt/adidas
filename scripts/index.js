@@ -14,3 +14,12 @@ var mainBnrSwiper = new Swiper('.main_bnr',{
         disableOnInteraction:false,
     },
 })
+
+var bestPickSwiper = new Swiper('.product_swiper',{
+    slidesPerView: 4,
+    spaceBetween:10,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
