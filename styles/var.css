@@ -1,4 +1,12 @@
 /* var.css */
+:root{
+    --desk-max-width: 1920px;
+    --desk-content-max-width: 1440px;
+
+    --color-primary: #000;
+    --bg-main: #ffffff;   
+    --text-muted :#DDD;
+}
 
 /* 정렬 */
 .flex-row-space{
@@ -16,9 +24,10 @@
     transform:skewX(-15deg);
 }
 .viewAll1 p {
-    color:#000 !important;
+    color:#000;
     transform:skewX(15deg); 
 }
+
 /* 버튼 디자인v.2 */
 .shoesBtm {
     width:476px; height:80px; 
@@ -29,6 +38,8 @@
 .shoesBtm p {
     color:#fff;
     transform: skewX(32deg);
+    font-size: 1.125rem;
+    font-weight: 300;
 }
 /* 버튼 디자인v.3 */
 .showAll {
@@ -49,30 +60,30 @@
 .showAll .shImg img {width:100%;}
 
 /* 메인배너 이전다음, 스크롤 버튼 */
-main .main_bnr > .swiper-button-prev {
+main .main_bnr > .main_swiper_btn_prev {
     right: 280px;
     left: auto; /* 기본 left 위치 제거 */
 }
-main .main_bnr > .swiper-button-prev,
-main .main_bnr > .swiper-button-next {
+main .main_bnr > .main_swiper_btn_prev,
+main .main_bnr > .main_swiper_btn_next {
     position: absolute;
     top: auto; /* 기본 top 위치 제거 */
     bottom: 50px;
     margin-top: 0; /* 기본 중앙 정렬 margin 제거 */
 }
 
-main .main_bnr > .swiper-button-next {
+main .main_bnr > .main_swiper_btn_next {
     right: 240px;
 }
-main .main_bnr > .swiper-button-prev::after,
-main .main_bnr > .swiper-button-next::after {
+main .main_bnr > .main_swiper_btn_prev::after,
+main .main_bnr > .main_swiper_btn_next::after {
     display: none; /* 기본 폰트 아이콘 숨김 */
 }
 
 
 
 /* 스크롤바 전체 영역 (Track) */
-main .main_bnr .swiper-scrollbar {
+main .main_bnr .main_swiper_btn_scroll {
     position: absolute;
     bottom:  64px;          /* 원하는 bottom 좌표 */
     left: 240px;             /* 중앙 정렬 예시 */
@@ -87,4 +98,85 @@ main .main_bnr .swiper-scrollbar {
     background: #fff;      /* 바 색상 */
     border-radius: 2px;
     cursor: pointer;
+}
+
+
+
+
+
+.viewAll1 {
+    position:absolute; bottom:404px;
+    overflow: hidden;
+}
+.viewAll1 p {
+    color:var(--color-primary); z-index: 999;
+    background: linear-gradient(to right, #fff 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    /* transition: color 0.5s ease; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    transition: background-position 0.5s ease;
+}
+
+/* =============================hover */
+.viewAll1:hover p {
+    color:#fff;
+    background-position: 0 0;
+}
+.viewAll1::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ''; 
+    display: block; 
+    background-color: #000;
+    width: 100%; 
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-196px); /* 왼쪽으로 들어간 기본 위치 */
+    
+    /* 핵심: 기본 요소에 transition을 넣어야 뗐을 때도 애니메이션이 적용됩니다 */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.viewAll1:hover::after {
+    opacity: 1;
+    transform: translateX(0); /* 원래 위치로 들어옴 */
+}
+
+
+
+main .shoesCty .shoes .shoesBtm{overflow: hidden;}
+main .shoesCty .shoes .shoesBtm:hover::after {
+    opacity: 1;
+    transform: translateX(0); /* 원래 위치로 들어옴 */
+}
+main .shoesCty .shoes .shoesBtm::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ''; 
+    display: block; 
+    background-color: #fff;
+    width: 100%; 
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-476px); /* 왼쪽으로 들어간 기본 위치 */
+    
+    /* 핵심: 기본 요소에 transition을 넣어야 뗐을 때도 애니메이션이 적용됩니다 */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+main .shoesCty .shoes .shoesBtm p {
+    color:var(--color-primary); z-index: 999;
+    background: linear-gradient(to right, #000 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    /* transition: color 0.5s ease; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    transition: background-position 0.5s ease;
+}
+main .shoesCty .shoes .shoesBtm:hover p {
+        color:#000;
+    background-position: 0 0;
 }

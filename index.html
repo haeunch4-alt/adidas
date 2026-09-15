@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>아디다스</title>
     <link rel="shortcut icon" href="./images/logo_black.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/var.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <script src="./scripts/index.js" defer></script>
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- scroll -->
+    <!-- GSAP 메인 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" ></script>
+    <!-- ScrollTrigger 플러그인 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <!-- 글꼴 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,48 +20,136 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- 파일 연결 -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/var.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="./scripts/index.js" defer></script>
 </head>
 <body>
     <!-- --------------------------- 1행 헤더 ~ 메인배너 -->
     <header>
         <div class="benefit_bnr"><p>이디클럽 데이, 포인트 상품권으로 즐기는 더 커진 쇼핑 혜택</p></div>
-        <nav class="flex-row-space">
-            <a href="./index.html" class="logo"><img src="./images/logo.png" alt="adidas"></a>
-            <ul class="gnb_center flex-row-space">
-                <li><a href="#">아디클럽 데이</a></li>
-                <li><a href="#">OULET</a></li>
-                <li><a href="#">MEN</a>
-                    <ul class="lnb"></ul>
-                </li>
-                <li><a href="#">WOMEN</a></li>
-                <li><a href="#">KIDS</a></li>
-                <li><a href="#">SPORTS</a></li>
-                <li><a href="#">LIFESTYLE</a></li>
-            </ul>
-            <div class="gnb_right flex-row-space">
-                <button type="button" class="search"><img src="./images/search.png" alt="검색하기"></button>
-                <a href="#" class="mypage"><img src="./images/mypage.png" alt="my page"></a>
-                <a href="#" class="cart"><img src="./images/cart.png" alt="cart"></a>
-            </div>
-        </nav>
     </header>
+    <nav class="flex-row-space">
+        <a href="./index.html" class="logo"><img src="./images/logo.png" alt="adidas"></a>
+        <ul class="gnb_center flex-row-space">
+            <li><a href="javascript:void(0)">아디클럽 데이</a></li>
+            <li><a href="javascript:void(0)">OULET</a></li>
+            <li><a href="javascript:void(0)">MEN</a>
+                <!-- ----------------------------------lnb -->
+                <ul class="lnb">
+                    <li class="lnb_li lnb_left">
+                        <p><a href="javascript:void(0)">NEW & TRENDING</a></p>
+                        <ul>
+                            <li><a href="javascript:void(0)">신제품</a></li>
+                            <li><a href="javascript:void(0)">신제품 출시 소식</a></li>
+                            <li><a href="javascript:void(0)">Seoul Edition</a></li>
+                            <li><a href="javascript:void(0)">앱 단독 아이템</a></li>
+                            <li><a href="javascript:void(0)">Members Exclusives</a></li>
+                            <li><a href="javascript:void(0)">아울렛</a></li>
+                            <li><a href="javascript:void(0)">아디클럽 혜택 보기</a></li>
+                            <li><a href="javascript:void(0)">Shop My Look</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb_li">
+                        <p><a href="javascript:void(0)">신발</a></p>
+                        <ul>
+                            <li><a href="javascript:void(0)">러닝</a></li>
+                            <li><a href="javascript:void(0)">트레이닝</a></li>
+                            <li><a href="javascript:void(0)">아웃도어</a></li>
+                            <li><a href="javascript:void(0)">축구</a></li>
+                            <li><a href="javascript:void(0)">농구</a></li>
+                            <li><a href="javascript:void(0)">슬리퍼 / 샌들</a></li>
+                            <li><a href="javascript:void(0)">테니스</a></li>
+                            <li><a href="javascript:void(0)">골프</a></li>
+                            <li><a href="javascript:void(0)">워킹화</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb_li">
+                        <p><a href="javascript:void(0)">의류</a></p>
+                        <ul>
+                            <li><a href="javascript:void(0)">티셔츠</a></li>
+                            <li><a href="javascript:void(0)">반바지</a></li>
+                            <li><a href="javascript:void(0)">팬츠</a></li>
+                            <li><a href="javascript:void(0)">후디 / 스웨트 셔츠</a></li>
+                            <li><a href="javascript:void(0)">자켓</a></li>
+                            <li><a href="javascript:void(0)">트랙수트 / 트랙탑</a></li>
+                            <li><a href="javascript:void(0)">풋볼 저지</a></li>
+                            <li><a href="javascript:void(0)">수영복</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb_li">
+                        <p><a href="javascript:void(0)">용품</a></p>
+                        <ul>
+                            <li><a href="javascript:void(0)">가방</a></li>
+                            <li><a href="javascript:void(0)">모자</a></li>
+                            <li><a href="javascript:void(0)">양말</a></li>
+                            <li><a href="javascript:void(0)">공</a></li>
+                            <li><a href="javascript:void(0)">장갑</a></li>
+                            <li><a href="javascript:void(0)">벨트</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb_li">
+                        <p><a href="javascript:void(0)">스포츠</a></p>
+                        <ul>
+                            <li><a href="javascript:void(0)">러닝</a></li>
+                            <li><a href="javascript:void(0)">트레이닝</a></li>
+                            <li><a href="javascript:void(0)">축구</a></li>
+                            <li><a href="javascript:void(0)">농구</a></li>
+                            <li><a href="javascript:void(0)">테니스</a></li>
+                            <li><a href="javascript:void(0)">모터스포츠</a></li>
+                            <li><a href="javascript:void(0)">골프</a></li>
+                            <li><a href="javascript:void(0)">하이킹 & 아웃도어</a></li>
+                            <li><a href="javascript:void(0)">수영</a></li>
+                            <li><a href="javascript:void(0)">스케이트보딩</a></li>
+                            <li><a href="javascript:void(0)">웨이트리프팅</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb_li">
+                        <p><a href="javascript:void(0)">브랜드</a></p>
+                        <ul>
+                            <li><a href="javascript:void(0)">오리지널스</a></li>
+                            <li><a href="javascript:void(0)">Y-3</a></li>
+                            <li><a href="javascript:void(0)">Terrex</a></li>
+                            <li><a href="javascript:void(0)">스포츠웨어</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb_li lnb_right">
+                        <img src="./images/sub_nav.jpg" alt="사진">
+                        <span class="title">어반 스트릿 WITH FELIX</span>
+                        <span class="content">아디다스 러닝 헤리티지를 현대적 미학으로 풀어낸 러닝화 ‘아디스타’ 라인업과 오리지널스 데님 컬렉션을 활용해 감각적인 스타일</span>
+                    </li>
+                </ul>
+            </li><!-- lnb end -->
+            <li><a href="javascript:void(0)">WOMEN</a></li>
+            <li><a href="javascript:void(0)">KIDS</a></li>
+            <li><a href="javascript:void(0)">SPORTS</a></li>
+            <li><a href="javascript:void(0)">LIFESTYLE</a></li>
+        </ul>
+        <div class="gnb_right flex-row-space">
+            <button type="button" class="search"><img src="./images/search.png" alt="검색하기"></button>
+            <a href="javascript:void(0)" class="mypage"><img src="./images/mypage.png" alt="my page"></a>
+            <a href="javascript:void(0)" class="cart"><img src="./images/cart.png" alt="cart"></a>
+        </div>
+    </nav>
     <main>
         <div class="swiper main_bnr">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"> 
                     <h1>FUNCTIONAL GRACE</h1>
                     <p>JENNIE만의 독창적인 시선과 창의적인 비전이 더해저, 강인한 <br> 여성의 우아한 움직임에서 영감받은 컬렉션</p>
-                    <a href="#" class="viewAll1 flex-row-space"><p>VIEW ALL</p></a>
+                    <a href="javascript:void(0)" class="viewAll1 flex-row-space"><p>VIEW ALL</p></a>
                 </div>
                 <div class="swiper-slide">
                     <h1>FUNCTIONAL GRACE</h1>
                     <p>JENNIE만의 독창적인 시선과 창의적인 비전이 더해저, 강인한 <br> 여성의 우아한 움직임에서 영감받은 컬렉션</p>
-                    <a href="#" class="viewAll1 flex-row-space"><p>VIEW ALL</p></a>
+                    <a href="javascript:void(0)" class="viewAll1 flex-row-space" data-text="VIEW ALL"><p>VIEW ALL</p></a>
                 </div>
             </div>
-            <div class="swiper-button-prev"><img src="./images/main_bnr_arrow.png" alt="이전"></div>
-            <div class="swiper-button-next"><img src="./images/main_bnr_arrow_flip.png " alt="다음"></div>
-            <div class="swiper-scrollbar"></div>
+            <div class="swiper-button-prev main_swiper_btn_prev"><img src="./images/main_bnr_arrow.png" alt="이전"></div>
+            <div class="swiper-button-next main_swiper_btn_next"><img src="./images/main_bnr_arrow_flip.png " alt="다음"></div>
+            <div class="swiper-scrollbar main_swiper_btn_scroll"></div>
         </div>
         <!-- --------------------------- 2행 best pick --> 
         <div class="best_pick">
@@ -70,74 +159,44 @@
             </div>
             <div class="category_more_wrap flex-row-space">
                 <ul class="category flex-row-space" >
-                    <li><button type="button" data-category="newTrending">NEW & TRENDING</button></li>
-                    <li class="active"><button type="button" data-category="shoes">SHOES</button></li>
-                    <li><button type="button"data-category="women">WOMEN</button></li>
-                    <li><button type="button"data-category="men">MEN</button></li>
-                    <li><button type="button"data-category="kids">KIDS</button></li>
-                    <li><button type="button"data-category="sports">SPORTS</button></li>
+                    <li><button type="button" >NEW & TRENDING</button></li>
+                    <li class="active"><button type="button">SHOES</button></li>
+                    <li><button type="button">WOMEN</button></li>
+                    <li><button type="button">MEN</button></li>
+                    <li><button type="button">KIDS</button></li>
+                    <li><button type="button">SPORTS</button></li>
                 </ul>
-                <a href="#" class="more_btn flex-row-space">
+                <a href="javascript:void(0)" class="more_btn flex-row-space">
                     <p>VIEW ALL</p>
                     <p class="imge"><img src="./images/product_viewAll_arrow.png" alt="viewall"></p>
                 </a>
             </div>
             <div class="swiper product_swiper">
                 <ul class="swiper-wrapper">
-                    <li class="swiper-slide" data-category="shoes">
+                    <li class="swiper-slide" >
                         <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
                         <h3>아디스타 MLD</h3>
                         <p class="produt_price">159,000 원</p>
                     </li>
-                    <li class="swiper-slide" data-category="shoes">
+                    <li class="swiper-slide">
                         <p class="product_image"><img src="./images/product2.jpg" alt="삼바 OG"></p>
                         <h3>삼바 OG</h3>
                         <p class="produt_price">149,000 원</p>
                     </li>
-                    <li class="swiper-slide" data-category="shoes">
+                    <li class="swiper-slide">
                         <p class="product_image"><img src="./images/product3.jpg" alt="아디스타 XLG 2.0"></p>
                         <h3>아디스타 XLG 2.0</h3>
                         <p class="produt_price">159,000 원</p>
                     </li>
-                    <li class="swiper-slide" data-category="shoes">
+                    <li class="swiper-slide" >
                         <p class="product_image"><img src="./images/product4.jpg" alt="핸드볼 스페지알"></p>
                         <h3>핸드볼 스페지알</h3>
                         <p class="produt_price">119,200 원</p>
                     </li>
-                    <li class="swiper-slide" data-category="shoes">
-                        <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
-                        <h3>아디스타 MLD</h3>
-                        <p class="produt_price">159,000 원</p>
-                    </li>
-                    <li class="swiper-slide" data-category="newTrending">
-                        <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
-                        <h3>아디스타 MLD</h3>
-                        <p class="produt_price">159,000 원</p>
-                    </li>
-                    <li class="swiper-slide" data-category="newTrending">
-                        <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
-                        <h3>아디스타 MLD</h3>
-                        <p class="produt_price">159,000 원</p>
-                    </li>
-                    <li class="swiper-slide" data-category="newTrending">
-                        <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
-                        <h3>아디스타 MLD</h3>
-                        <p class="produt_price">159,000 원</p>
-                    </li>
-                    <li class="swiper-slide" data-category="newTrending">
-                        <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
-                        <h3>아디스타 MLD</h3>
-                        <p class="produt_price">159,000 원</p>
-                    </li>
-                    <li class="swiper-slide" data-category="newTrending">
-                        <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
-                        <h3>아디스타 MLD</h3>
-                        <p class="produt_price">159,000 원</p>
-                    </li>
                 </ul>
             </div>
-            <div class="swiper-button-prev"><img src="./images/product_arrow.png" alt="이전 상품 보기"></div>
-            <div class="swiper-button-next"><img src="./images/product_arrow_right.png" alt="다음 상품 보기"></div>
+            <div class="swiper-button-prev best_swiper_btn_prev"><img src="./images/product_arrow.png" alt="이전 상품 보기"></div>
+            <div class="swiper-button-next best_swiper_btn_next"><img src="./images/product_arrow_right.png" alt="다음 상품 보기"></div>
         </div>
         <!-- --------------------------- 3행 분류 --> 
         <div class="shoesCty">
@@ -145,19 +204,24 @@
                 <p class="shoseImg"><img src="./images/shoes1.jpg" alt=""></p>
                 <p class="shoesSubTitle">언제나 나만의 페이스로</p>
                 <h3>RUN HYPER</h3>
-                <a href="#" class="shoesBtm"><p>VIEW ALL</p></a>
+                <a href="javascript:void(0)" class="shoesBtm"><p>VIEW ALL</p></a>
             </div>
             <div class="shoes2 shoes">
                 <p class="shoseImg"><img src="./images/shoes2.jpg" alt=""></p>
                 <p class="shoesSubTitle">땀 흘리는 가장 빛나는 순간</p>
                 <h3>ORIGINALS SPORTS</h3>
-                <a href="#" class="shoesBtm"><p>VIEW ALL</p></a>
+                <a href="javascript:void(0)" class="shoesBtm"><p>VIEW ALL</p></a>
             </div>
             <div class="shoes3 shoes">
                 <p class="shoseImg"><img src="./images/shoes3.jpg" alt=""></p>
                 <p class="shoesSubTitle">정상 너머, 끝없는 모험속으로</p>
                 <h3>OUTDOOR</h3>
-                <a href="#" class="shoesBtm"><p>VIEW ALL</p></a>
+                <a href="javascript:void(0)" class="shoesBtm"><p>VIEW ALL</p></a>
+            </div>
+            <div class="shoes_line">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
         <!-- --------------------------- 4행 판매상품 -->
@@ -184,10 +248,12 @@
                     <p class="price">95,200 원</p>
                 </li>
             </ul>
-            <p class="fallBack"><img src="./images/fall_back.jpg" alt="배경"></p>
-            <p class="fallSub">플리츠, 새틴, 니트가 완성하는 감각적인 가을 스타일</p>
-            <h3>FALL IN TEXTURE</h3>
-            <button type="button" class="viewAll1"><p>VIEW ALL</p></button>
+            <div class="fall_letter">
+                <p class="fallBack"><img src="./images/fall_back.jpg" alt="배경"></p>
+                <p class="fallSub">플리츠, 새틴, 니트가 완성하는 감각적인 가을 스타일</p>
+                <h3>FALL IN TEXTURE</h3>
+                <button type="button" class="viewAll1"><p>VIEW ALL</p></button>
+            </div>
         </div>
         <!-- --------------------------- 5행 판매상품(제니콜라보) -->
         <div class="jennie_wrap">
@@ -196,12 +262,24 @@
                 <h3>THE NEW ICON</h3>
             </div>
             <ul class="jennie_right">
-                <li><a href="#"><img src="./images/jennie_pro1.jpg" alt="상품이미지"></a></li>
-                <li><a href="#"><img src="./images/jennie_pro2.jpg" alt="상품이미지"></a></li>
-                <li><a href="#"><img src="./images/jennie_pro3.jpg" alt="상품이미지"></a></li>
-                <li><a href="#"><img src="./images/jennie_pro4.jpg" alt="상품이미지"></a></li>
+                <li>
+                    <a href="javascript:void(0)" class="proPhoto"><img src="./images/jennie_pro1.jpg" alt="상품이미지"></a>
+                    <a href="javascript:void(0)" class="proText"><span class="title">adidas Originals by JENNIE 슈퍼스타 스퀘어 발레</span><span class="price">169,000 원</span></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="proPhoto"><img src="./images/jennie_pro2.jpg" alt="상품이미지"></a>
+                    <a href="javascript:void(0)" class="proText"><span class="title">adidas Originals by JENNIE 플리티드 트랙 팬츠</span><span class="price">169,000 원</span></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="proPhoto"><img src="./images/jennie_pro3.jpg" alt="상품이미지"></a>
+                    <a href="javascript:void(0)" class="proText"><span class="title">adidas Originals by JENNIE 랩어라운드 스커트</span><span class="price">99,000 원</span></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="proPhoto"><img src="./images/jennie_pro4.jpg" alt="상품이미지"></a>
+                    <a href="javascript:void(0)" class="proText"><span class="title">adidas Originals by JENNIE 컷아웃 양말 1켤레</span><span class="price">20,000 원</span></a>
+                </li>
             </ul>
-            <a href="#" class="viewAll1"><p>VIEW ALL</p></a>
+            <a href="javascript:void(0)" class="viewAll1"><p>VIEW ALL</p></a>
         </div>
         <!-- --------------------------- 6행 광고배너 -->
         <div class="sub_bnr">
@@ -210,8 +288,38 @@
         </div>
         <!-- --------------------------- 7행 룩북 -->
         <ul class="lookBook">
-            <li class="lB1"><button type="button" class="showAll"><p class="shLetter">SHOW ALL</p><p class="shImg"><img src="./images/showAll_arrow.png" alt="더보기"></p></button></li>
-            <li class="lB2"><button type="button" class="showAll"><p class="shLetter">SHOW ALL</p><p class="shImg"><img src="./images/showAll_arrow.png" alt="더보기"></p></button></li>
+            <li class="lB1">
+                <button type="button" class="showAll">
+                    <p class="shLetter">SHOW ALL</p><p class="shImg"><img src="./images/showAll_arrow.png" alt="더보기"></p></button>
+            </li>
+            <li class="lB2">
+                <button type="button" class="showAll">
+                    <p class="shLetter">SHOW ALL</p>
+                    <p class="shImg"><img src="./images/showAll_arrow.png" alt="더보기"></p>
+                </button>
+                <div class="lBProduct">
+                    <button type="button" class="closeBtn">
+                        <p class="shLetter">CLOSE</p>
+                        <p class="shImg"><img src="./images/showAll_arrow.png" alt="더보기"></p>
+                    </button>
+                    <a href="javascript:void(0)" class="product">
+                        <p class="lBProImg"><img src="./images/lookbook_pro1.jpg" alt="상품이미지"></p>
+                        <div class="lBProContent">
+                            <p class="lBTitle">Women • Originals</p>
+                            <h3 class="lBCategory">adidas Originals by JENNIE 랩 스커트</h3>
+                            <p class="lBPrice">99,000 원</p>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0)" class="product">
+                        <p class="lBProImg"><img src="./images/lookbook_pro2.jpg" alt="상품이미지"></p>
+                        <div class="lBProContent">
+                            <p class="lBTitle">Women • Originals</p>
+                            <h3 class="lBCategory">adidas Originals by JENNIE 쉬어 롱 슬리브 티셔츠</h3>
+                            <p class="lBPrice">79,000 원</p>
+                        </div>
+                    </a>
+                </div>
+                </li>
             <li class="lB3"><button type="button" class="showAll"><p class="shLetter">SHOW ALL</p><p class="shImg"><img src="./images/showAll_arrow.png" alt="더보기"></p></button></li>
         </ul>
         <!-- --------------------------- 8행 브랜드 -->
@@ -235,7 +343,7 @@
                 <p>개인정보관리책임자: 장영태</p>
                 <p>호스팅서비스사업자: 아디다스코리아(유)</p>
                 <p>고객센터: 1588-8241</p>
-                <p>이메일: service@onlineshop.adidas.co.kr</p>
+                <a href="javascript:void(0)">이메일: service@onlineshop.adidas.co.kr </a>
             </div>
         </footer>
     </main>
