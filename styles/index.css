@@ -167,40 +167,49 @@ main .best_pick .product_swiper .swiper-wrapper .swiper-slide .produt_price {
     font-size:0.875rem;
     line-height: 1.5;
     letter-spacing: -1.1%;
+    font-weight: 400;
     width:max-content;
 }
 /* ---------------------------------------------------3행 */
-main .shoes_category {
-    padding:100px 240px 180px ; gap:8px;
+main .shoesCty {
     background-image: url(../images/shoes_category_background.jpg);
-    background-size:cover ;
-}
-main .shoes_category .shoes {}
-main .shoes_category .shoes_1 .shoesTop {background-image: url(../images/shoes1.jpg);}
-main .shoes_category .shoes_2 .shoesTop {background-image: url(../images/shoes2.jpg);}
-main .shoes_category .shoes_3 .shoesTop {background-image: url(../images/shoes3.jpg);}
-main .shoes_category .shoes .shoesTop {
-    transform: skewX(12deg);
     background-size: cover;
-    height: 591px; display: block; 
-    margin-bottom: 2px; 
+    width:100%; padding:100px 240px 180px; 
+    height:857.97px;
+    display:flex; flex-flow: row nowrap; justify-content: center;
 }
-main .shoes_category .shoes .shoesTop p {
-    color:#d7d7d7;
+main .shoesCty .shoes {
+    height:590px; position:relative;
+    margin-right:5px;
+}
+main .shoesCty .shoes .shoseImg {
+    height:590px; width:476.67px;
+    transform: skew(12deg);
+    overflow: hidden;
+}
+main .shoesCty .shoes .shoseImg img {width:130%;}
+main .shoesCty .shoes .shoesSubTitle {
+    position:absolute;
     font-size: 0.875rem;
-    transform: skewX(-12deg);
-    position:absolute; left: 30px; bottom:66.64px;
+    bottom:66px; left:80px;
+    color:#d7d7d7;
 }
-main .shoes_category .shoes .shoesTop h3 {
-    transform: skewX(-12deg);
-    color:#fff; 
+main .shoesCty .shoes h3 {
+    position:absolute;
     font-size: 2.5rem;
     font-weight: 700;
-    position:absolute; left: 20px; bottom:20.4px;
+    bottom:20px; left:75px;
+    color:#fff;
 }
-/* ------------------------view all */
-main .shoes_category .shoes .shoesBtm {}
-main .shoes_category .shoes .shoesBtm p {}
+main .shoesCty .shoes .shoesBtm {
+    position:absolute;
+    bottom: -82px; right:-37.5px;
+}
+main .shoesCty .shoes .shoesBtm p {}
+main .shoesCty .shoes1 {}
+main .shoesCty .shoes2 {}
+main .shoesCty .shoes2 .shoesSubTitle {color:#fff;}
+main .shoesCty .shoes3 {}
 /* ---------------------------------------------------4행 판매상품 */
 main .fallProduct {
     padding:100px 0; display: flex; flex-flow: row nowrap; 
@@ -240,7 +249,7 @@ main .fallProduct > h3 {
 main .fallProduct .viewAll1 {
     position:absolute; right:277px; bottom:117px;
     display: flex; justify-content: center; align-items: center ;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     width: 196px; height: 41px;
     transform:skewX(-15deg);
 }
@@ -249,7 +258,142 @@ main .fallProduct .viewAll1 p {
     transform:skewX(15deg); 
 }
 /* ---------------------------------------------------5행 판매상품(제니콜라보) */
+main .jennie_wrap {
+    background-image: url(../images/jennie.jpg);
+    background-size:cover;
+    width:100%; height:1007px;
+    position:relative;  
+    display: flex; flex-flow: column nowrap;
+    justify-content: center;
+}
+main .jennie_wrap .jennie_left {
+    padding-left:184px
+}
+main .jennie_wrap .jennie_left p {
+    font-family: 'Pragati Narrow';
+    font-size: 2.813rem;
+    font-weight: bold;
+    letter-spacing: 19%;
+    color:#fff;
+}
+main .jennie_wrap .jennie_left h3 {
+    font-family: 'Pragati Narrow';
+    font-size: 7.5rem; 
+    font-weight: bold;
+    color:#fff;
+}
+main .jennie_wrap .jennie_right {
+    display:flex; flex-flow:row wrap; width:680px;
+    position:absolute; right:240px; bottom:110px;
+}
+main .jennie_wrap .jennie_right li {width:330px; height:360px; margin-bottom: 20px;}
+main .jennie_wrap .jennie_right li:nth-child(1),
+main .jennie_wrap .jennie_right li:nth-child(3){
+    margin-right:20px;
+}
+main .jennie_wrap .jennie_right li a {}
+main .jennie_wrap .jennie_right li a img {width:100%;}
+main .jennie_wrap .viewAll1 {
+    position:absolute; left:57px; bottom:146px;
+    align-items: center; 
+    background-color: rgba(255, 255, 255, 0.8);
+}
 /* ---------------------------------------------------6행 광고배너 */
+main .sub_bnr {
+    width:100%; height:333px; 
+    background-image: url(../images/sub_banner.jpg);
+    background-size:cover;
+    display: flex; flex-flow: column nowrap;
+    justify-content: center; align-items: center;
+}
+main .sub_bnr p {
+    font-size: 1.25rem;
+    font-weight: 'regular';
+    color:#fff;
+}
+main .sub_bnr h3 {
+    line-height: 1.2;
+    font-size: 4.375rem;
+    font-weight: 700;
+    color:#fff;
+}
 /* ---------------------------------------------------7행 룩북 */
+main .lookBook {
+    width:100%;
+    display:flex; flex-flow: row nowrap;
+    padding:100px 240px; gap :10px;
+}
+main .lookBook li {
+    width:100%; height:756px;
+    background-size: cover;
+    display: flex; flex-flow: column nowrap;
+    padding: 15px; justify-content: flex-end;
+}
+main .lookBook .lB1 {background-image: url(../images/lookBook_1.jpg);}
+main .lookBook .lB2 {background-image: url(../images/lookBook_2.jpg);}
+main .lookBook .lB3 {background-image: url(../images/lookBook_3.jpg);}
+main .lookBook li .showAll {width:max-content;}
+main .lookBook li .showAll p {}
 /* ---------------------------------------------------8행 브랜드 */
+main .brand {
+    width:100%; height: 920px; padding:80px 0;
+    background-image: url(../images/brand_back.jpg);
+    background-size: cover;
+    position:relative;
+    display: flex; flex-flow: column nowrap;
+    justify-content: space-between; align-items: center;
+}
+main .brand > * {
+    color:#fff;
+}
+main .brand h3 {
+    font-family: 'Radio Canada Big';
+    font-weight: 'semiBold';
+    font-size: 2.125rem;
+    
+}
+main .brand iframe {
+    position:absolute; top:183px; right:374px;
+}
+main .brand .brand_btm {}
+main .brand .brand_btm h4 {
+    font-size:1.125rem ;
+    font-weight: 'Medium';
+    color:#fff;
+    text-align: center;
+}
+main .brand .brand_btm p {
+    color:#aaa;
+    font-weight:'Medium';
+    line-height: 1.6;
+    text-align: center;
+    margin-top:10px;
+}
 /* ---------------------------------------------------9행 footer */
+main footer {
+    background-color: #000;
+    width:100%; padding:100px 120px;
+}
+main footer h3 {
+    font-size: 12.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    color:#fff;
+    margin-bottom:10px;
+}
+main footer .footerBtm {
+    width:100%;
+    display:flex;
+    flex-flow: row wrap;
+}
+main footer .footerBtm p {
+    padding: 0 10px; 
+    color:#bdbdbd;
+    border-right:1px solid rgba(189,189,189, 0.2);
+    width:max-content;
+    margin-bottom:10px;
+}
+main footer .footerBtm p:nth-child(6),
+main footer .footerBtm p:nth-child(9){
+    border-color: #000;
+}

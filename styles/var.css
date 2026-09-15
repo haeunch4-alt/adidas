@@ -20,17 +20,33 @@
     transform:skewX(15deg); 
 }
 /* 버튼 디자인v.2 */
-main .shoes_category .shoes  .shoesBtm {
+.shoesBtm {
     width:476px; height:80px; 
     display: flex; align-items: center; justify-content: center;
     background-color: #000;
     transform: skewX(-32deg);
 }
-main .shoes_category .shoes .shoesBtm p {
+.shoesBtm p {
     color:#fff;
     transform: skewX(32deg);
 }
-
+/* 버튼 디자인v.3 */
+.showAll {
+    padding:6px 30px;
+    display: flex; justify-content: center; align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    transform:skewX(-15deg);
+    gap:10px;
+}
+.showAll .shLetter {
+    transform: skewX(15deg);
+    line-height: 1.6;
+}
+.showAll .shImg {
+    width:16px;
+    transform: skewX(15deg);
+}
+.showAll .shImg img {width:100%;}
 
 /* 메인배너 이전다음, 스크롤 버튼 */
 main .main_bnr > .swiper-button-prev {

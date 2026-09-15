@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>아디다스</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/logo_black.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/var.css">
     <link rel="stylesheet" href="styles/index.css">
@@ -70,12 +70,12 @@
             </div>
             <div class="category_more_wrap flex-row-space">
                 <ul class="category flex-row-space" >
-                    <li><button type="button">NEW & TRENDING</button></li>
-                    <li class="active"><button type="button" >SHOES</button></li>
-                    <li><button type="button">WOMEN</button></li>
-                    <li><button type="button">MEN</button></li>
-                    <li><button type="button">KIDS</button></li>
-                    <li><button type="button">SPORTS</button></li>
+                    <li><button type="button" data-category="newTrending">NEW & TRENDING</button></li>
+                    <li class="active"><button type="button" data-category="shoes">SHOES</button></li>
+                    <li><button type="button"data-category="women">WOMEN</button></li>
+                    <li><button type="button"data-category="men">MEN</button></li>
+                    <li><button type="button"data-category="kids">KIDS</button></li>
+                    <li><button type="button"data-category="sports">SPORTS</button></li>
                 </ul>
                 <a href="#" class="more_btn flex-row-space">
                     <p>VIEW ALL</p>
@@ -84,27 +84,52 @@
             </div>
             <div class="swiper product_swiper">
                 <ul class="swiper-wrapper">
-                    <li class="swiper-slide">
+                    <li class="swiper-slide" data-category="shoes">
                         <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
                         <h3>아디스타 MLD</h3>
                         <p class="produt_price">159,000 원</p>
                     </li>
-                    <li class="swiper-slide">
+                    <li class="swiper-slide" data-category="shoes">
                         <p class="product_image"><img src="./images/product2.jpg" alt="삼바 OG"></p>
                         <h3>삼바 OG</h3>
                         <p class="produt_price">149,000 원</p>
                     </li>
-                    <li class="swiper-slide">
+                    <li class="swiper-slide" data-category="shoes">
                         <p class="product_image"><img src="./images/product3.jpg" alt="아디스타 XLG 2.0"></p>
                         <h3>아디스타 XLG 2.0</h3>
                         <p class="produt_price">159,000 원</p>
                     </li>
-                    <li class="swiper-slide">
+                    <li class="swiper-slide" data-category="shoes">
                         <p class="product_image"><img src="./images/product4.jpg" alt="핸드볼 스페지알"></p>
                         <h3>핸드볼 스페지알</h3>
                         <p class="produt_price">119,200 원</p>
                     </li>
-                    <li class="swiper-slide">
+                    <li class="swiper-slide" data-category="shoes">
+                        <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
+                        <h3>아디스타 MLD</h3>
+                        <p class="produt_price">159,000 원</p>
+                    </li>
+                    <li class="swiper-slide" data-category="newTrending">
+                        <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
+                        <h3>아디스타 MLD</h3>
+                        <p class="produt_price">159,000 원</p>
+                    </li>
+                    <li class="swiper-slide" data-category="newTrending">
+                        <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
+                        <h3>아디스타 MLD</h3>
+                        <p class="produt_price">159,000 원</p>
+                    </li>
+                    <li class="swiper-slide" data-category="newTrending">
+                        <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
+                        <h3>아디스타 MLD</h3>
+                        <p class="produt_price">159,000 원</p>
+                    </li>
+                    <li class="swiper-slide" data-category="newTrending">
+                        <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
+                        <h3>아디스타 MLD</h3>
+                        <p class="produt_price">159,000 원</p>
+                    </li>
+                    <li class="swiper-slide" data-category="newTrending">
                         <p class="product_image"><img src="./images/product1.jpg" alt="아디스타 MLD"></p>
                         <h3>아디스타 MLD</h3>
                         <p class="produt_price">159,000 원</p>
@@ -115,26 +140,23 @@
             <div class="swiper-button-next"><img src="./images/product_arrow_right.png" alt="다음 상품 보기"></div>
         </div>
         <!-- --------------------------- 3행 분류 --> 
-        <div class="shoes_category flex-row-space">
-            <div class="shoes shoes_1">
-                <a href="#" class="shoesTop">
-                    <p>언제나 나만의 페이스로</p>
-                    <h3>RUN HYPER</h3>
-                </a>
+        <div class="shoesCty">
+            <div class="shoes1 shoes">
+                <p class="shoseImg"><img src="./images/shoes1.jpg" alt=""></p>
+                <p class="shoesSubTitle">언제나 나만의 페이스로</p>
+                <h3>RUN HYPER</h3>
                 <a href="#" class="shoesBtm"><p>VIEW ALL</p></a>
             </div>
-            <div class="shoes shoes_2">
-                <a href="#" class="shoesTop">
-                    <p>땀 흘리는 가장 빛나는 순간</p>
-                    <h3>ORIGINALS SPORTS</h3>
-                </a>
+            <div class="shoes2 shoes">
+                <p class="shoseImg"><img src="./images/shoes2.jpg" alt=""></p>
+                <p class="shoesSubTitle">땀 흘리는 가장 빛나는 순간</p>
+                <h3>ORIGINALS SPORTS</h3>
                 <a href="#" class="shoesBtm"><p>VIEW ALL</p></a>
             </div>
-            <div class="shoes shoes_3">
-                <a href="#" class="shoesTop">
-                    <p>정상 너머, 끝없는 모험속으로</p>
-                    <h3>OUTDOOR</h3>
-                </a>
+            <div class="shoes3 shoes">
+                <p class="shoseImg"><img src="./images/shoes3.jpg" alt=""></p>
+                <p class="shoesSubTitle">정상 너머, 끝없는 모험속으로</p>
+                <h3>OUTDOOR</h3>
                 <a href="#" class="shoesBtm"><p>VIEW ALL</p></a>
             </div>
         </div>
@@ -168,10 +190,54 @@
             <button type="button" class="viewAll1"><p>VIEW ALL</p></button>
         </div>
         <!-- --------------------------- 5행 판매상품(제니콜라보) -->
+        <div class="jennie_wrap">
+            <div class="jennie_left">
+                <p>adidas Originals by JENNIE</p>
+                <h3>THE NEW ICON</h3>
+            </div>
+            <ul class="jennie_right">
+                <li><a href="#"><img src="./images/jennie_pro1.jpg" alt="상품이미지"></a></li>
+                <li><a href="#"><img src="./images/jennie_pro2.jpg" alt="상품이미지"></a></li>
+                <li><a href="#"><img src="./images/jennie_pro3.jpg" alt="상품이미지"></a></li>
+                <li><a href="#"><img src="./images/jennie_pro4.jpg" alt="상품이미지"></a></li>
+            </ul>
+            <a href="#" class="viewAll1"><p>VIEW ALL</p></a>
+        </div>
         <!-- --------------------------- 6행 광고배너 -->
+        <div class="sub_bnr">
+            <p>adiclub</p>
+            <h3>DAYS</h3>
+        </div>
         <!-- --------------------------- 7행 룩북 -->
+        <ul class="lookBook">
+            <li class="lB1"><button type="button" class="showAll"><p class="shLetter">SHOW ALL</p><p class="shImg"><img src="./images/showAll_arrow.png" alt="더보기"></p></button></li>
+            <li class="lB2"><button type="button" class="showAll"><p class="shLetter">SHOW ALL</p><p class="shImg"><img src="./images/showAll_arrow.png" alt="더보기"></p></button></li>
+            <li class="lB3"><button type="button" class="showAll"><p class="shLetter">SHOW ALL</p><p class="shImg"><img src="./images/showAll_arrow.png" alt="더보기"></p></button></li>
+        </ul>
         <!-- --------------------------- 8행 브랜드 -->
+        <div class="brand">
+            <h3>BRAND STORY</h3>
+            <iframe width="1166" height="514" src="https://www.youtube.com/embed/FzaS0V_FCrI?autoplay=1&mute=1&loop=1&playlist=FzaS0V_FCrI&controls=0" title="You Got This | adidas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="brand_btm">
+                <h4>1949년부터, 스토리와 스타일, 스포츠를 이끌다</h4>
+                <p>스포츠는 건강을 지키며, 내면을 밝혀주고, 우리를 하나로 이어줍니다. 아디다스는 스포츠를 통해 세상을 바꿀 수있다고 믿습니다. 세계무대를 빛내는 스포츠 선수에서, 평<br>범한 사람들의 일상에 이르기까지, 우리는 최상의 테크놀로지로 최상의 퍼포먼스•••</p>
+            </div>
+        </div>
         <!-- --------------------------- 9행 footer -->
+        <footer>
+            <h3>ADIDAS</h3>
+            <div class="footerBtm">
+                <p>아디다스코리아(유)</p>
+                <p>서울특별시 서초구 서초대로 74길 4, 삼성생명 서초타워 23층 (06620)</p>
+                <p>대표자: 마커스모렌트</p>
+                <p>사업자 등록번호: 214-81-07412</p>
+                <p>통신판매업신고: 2007-서울서초-10391</p>
+                <p>개인정보관리책임자: 장영태</p>
+                <p>호스팅서비스사업자: 아디다스코리아(유)</p>
+                <p>고객센터: 1588-8241</p>
+                <p>이메일: service@onlineshop.adidas.co.kr</p>
+            </div>
+        </footer>
     </main>
 </body>
 </html>
