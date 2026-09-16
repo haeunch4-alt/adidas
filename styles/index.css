@@ -193,7 +193,7 @@ main .best_pick .category_more_wrap .more_btn .imge {width:22px;}
 main .best_pick .category_more_wrap .more_btn .imge img {width:100%;}
 /* ===================================상품 */
 main .best_pick .product_swiper {
-    position:relative; overflow: hidden;  
+    position:relative; /* overflow: hidden;   */
     margin: 0 auto;
     max-width: var(--desk-content-max-width); width:100%;
 }
@@ -230,6 +230,7 @@ main .best_pick >.best_swiper_btn_prev::after,
 main .best_pick .best_swiper_btn_next::after {
     display: none;
 }
+
 /* ===================================이전다음 버튼 end */
 main .best_pick .product_swiper .swiper-wrapper {}
 main .best_pick .product_swiper .swiper-wrapper .swiper-slide {}
@@ -464,26 +465,32 @@ main .lookBook .lB3 {background-image: url(../images/lookBook_3.jpg);}
 main .lookBook li .showAll {width:max-content;}
 main .lookBook li .showAll p {}
 /* ---------------------------------------------------*/
-main .lookBook li .lBProduct {width:100%;}
-main .lookBook li .lBProduct .closeBtn{}
+main .lookBook li .lBProduct {width:100%; display: none;}
+main .lookBook li .lBProduct .closeBtn{display:none;}
 main .lookBook li .lBProduct .shLetter{}
 main .lookBook li .lBProduct .shImg{}
 main .lookBook li .lBProduct .shImg img{}
 main .lookBook li .product {
     display: flex; flex-flow: row nowrap;
     background-color: #fff;
-    margin-top:15px;
+    margin-top:15px; height:120px;
 }
-main .lookBook li .product .lBProImg {width:102px;}
-main .lookBook li .product .lBProImg img {width:100%;}
+main .lookBook li .product .lBProImg { }
+main .lookBook li .product .lBProImg img {height: 100%;}
 main .lookBook li .product .lBProContent {
     display:flex; flex-flow: column nowrap;
     justify-content:space-between;
     padding:18px 10px;
 }
-main .lookBook li .product .lBProContent .lBTitle {}
-main .lookBook li .product .lBProContent .lBCategory {}
-main .lookBook li .product .lBProContent .lBPrice {}
+main .lookBook li .product .lBProContent .lBCategory {
+    color: #929292; font-size:0.875rem ; margin-bottom: 2px;
+}
+main .lookBook li .product .lBProContent .lBTitle {
+    margin-bottom: 10px; font-weight: 700;
+}
+main .lookBook li .product .lBProContent .lBPrice {
+    font-weight: 500; font-size: 0.875rem;
+}
 /* ---------------------------------------------------8행 브랜드 */
 main .brand {
     max-width:var(--desk-max-width); margin: 0 auto; height: 920px; padding:80px 0;

@@ -34,10 +34,9 @@ bestBtns.forEach((btn) => {
         
         // 2. 현재 클릭한 li에만 active 클래스 추가
         btn.classList.add('active');
-    });
+    })
 });
 
-// nav hover 시 sub nav 활성화
 
 
 // ScrollTrigger 플러그인 등록
@@ -55,3 +54,47 @@ gsap.to('nav',{
 })
 
 // lookbook showall 클릭 시 상품 올라오기 (애니메이션 포함 (아래에서 위로 올라오기))
+const viewAllBtn = document.querySelector('.showAll')
+const closeBtn = document.querySelector('.closeBtn')
+const lBproduct = document.querySelector('.lBproduct ')
+
+console.log(viewAllBtn,closeBtn, lBproduct);
+
+const li = document.querySelectorAll('.lookBook li')
+// 1. 각각의 li(카드) 요소들을 선택
+const liList = document.querySelectorAll('.lookBook > li');
+
+liList.forEach((target) => {
+  // 2. target(현재 li) 안에서 각각의 요소 찾기
+    const viewAllBtn = target.querySelector('.showAll');
+    const closeBtn = target.querySelector('.closeBtn');
+    const lBproduct = target.querySelector('.lBProduct');
+
+    // SHOW ALL 클릭 시
+    if (viewAllBtn) {
+        viewAllBtn.addEventListener('click', () => {
+            viewAllBtn.classList.add('active');
+            if (closeBtn) closeBtn.style.display = 'flex';
+            viewAllBtn.style.display = 'none';
+            if (lBproduct) {
+                lBproduct.style.display = 'block';
+                lBproduct.classList.add('active');
+            }
+        });
+    }
+
+    // CLOSE 클릭 시
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            if (viewAllBtn) {
+                viewAllBtn.classList.remove('active');
+                viewAllBtn.style.display = 'flex';
+            }
+            closeBtn.style.display = 'none';
+            if (lBproduct) {
+                lBproduct.style.display = 'none';
+                lBproduct.classList.remove('active');
+            }
+        });
+    }
+});

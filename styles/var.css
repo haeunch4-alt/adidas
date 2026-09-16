@@ -59,6 +59,28 @@
 }
 .showAll .shImg img {width:100%;}
 
+main .lookBook li .closeBtn{
+    padding:6px 30px;
+    display: flex; justify-content: center; align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    transform:skewX(-15deg);
+    gap:10px;
+    width:max-content;
+    display:none;
+}
+main .lookBook li  .closeBtn .shLetter{
+    transform: skewX(15deg);
+    line-height: 1.6;
+}
+main .lookBook li .closeBtn .shImg{
+    width:16px;
+    transform: skewX(15deg) ;
+}
+main .lookBook li .closeBtn .shImg img{width:100%;}
+
+
+
+
 /* 메인배너 이전다음, 스크롤 버튼 */
 main .main_bnr > .main_swiper_btn_prev {
     right: 280px;
