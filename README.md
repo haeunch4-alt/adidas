@@ -12,13 +12,16 @@
 * nav hover 시 sub nav 활성화 
 * view all 버튼 hover 시 오른쪽으로 색변경 애니메이션 
 * lookbook showall 누를 시 상품 올라는 곳 진행 중
+# 26/09/16
+* lookbook 클릭 시 상품 띄우기 완료
+* view all 버튼 호버시 생기는 오류 고침
 
 
 ## JS
-* nav hover 시 sub nav 활성화 o
-* 스크롤 시 nav 색 변경 및 고정 o
+* nav hover 시 sub nav 활성화 
+* 스크롤 시 nav 색 변경 및 고정 
 * best pick 분류 누를 시 상품변경 및 active 활성화 
-* view all 버튼 hover 시 오른쪽으로 색변경 애니메이션 o
+* view all 버튼 hover 시 오른쪽으로 색변경 애니메이션 
 * lookbook showall 클릭 시 상품 올라오기 (애니메이션 포함 (아래에서 위로 올라오기))
 
 ## 오류
@@ -28,3 +31,7 @@
     * absolute 만 있어서 생긴 오류로 추정 
 * 26/09/14
 * pretendard Regular가 얇음 (피그마랑 다름)
+
+* 26/9/16
+* view all 에 hover 하면 잔상이남음
+    * text gradiant 떄문에 생긴 오류로 추정 
